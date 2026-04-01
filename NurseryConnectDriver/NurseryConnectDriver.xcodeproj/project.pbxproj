@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		142DC9D82F7D5268009155F3 /* NurseryConnectDriverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DC9D72F7D5268009155F3 /* NurseryConnectDriverApp.swift */; };
+		142DC9DA2F7D5268009155F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DC9D92F7D5268009155F3 /* ContentView.swift */; };
+		142DC9DC2F7D526A009155F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 142DC9DB2F7D526A009155F3 /* Assets.xcassets */; };
+		142DC9DF2F7D526A009155F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 142DC9DE2F7D526A009155F3 /* Preview Assets.xcassets */; };
+		142DC9E92F7D526A009155F3 /* NurseryConnectDriverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DC9E82F7D526A009155F3 /* NurseryConnectDriverTests.swift */; };
+		142DC9F32F7D526A009155F3 /* NurseryConnectDriverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DC9F22F7D526A009155F3 /* NurseryConnectDriverUITests.swift */; };
+		142DC9F52F7D526A009155F3 /* NurseryConnectDriverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DC9F42F7D526A009155F3 /* NurseryConnectDriverUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		142DC9E52F7D526A009155F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 142DC9CC2F7D5268009155F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 142DC9D32F7D5268009155F3;
+			remoteInfo = NurseryConnectDriver;
+		};
+		142DC9EF2F7D526A009155F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 142DC9CC2F7D5268009155F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 142DC9D32F7D5268009155F3;
+			remoteInfo = NurseryConnectDriver;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		142DC9D42F7D5268009155F3 /* NurseryConnectDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseryConnectDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		142DC9D72F7D5268009155F3 /* NurseryConnectDriverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseryConnectDriverApp.swift; sourceTree = "<group>"; };
+		142DC9D92F7D5268009155F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		142DC9DB2F7D526A009155F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		142DC9DE2F7D526A009155F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		142DC9E42F7D526A009155F3 /* NurseryConnectDriverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NurseryConnectDriverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		142DC9E82F7D526A009155F3 /* NurseryConnectDriverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseryConnectDriverTests.swift; sourceTree = "<group>"; };
+		142DC9EE2F7D526A009155F3 /* NurseryConnectDriverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NurseryConnectDriverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		142DC9F22F7D526A009155F3 /* NurseryConnectDriverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseryConnectDriverUITests.swift; sourceTree = "<group>"; };
+		142DC9F42F7D526A009155F3 /* NurseryConnectDriverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseryConnectDriverUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		142DC9D12F7D5268009155F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		142DC9E12F7D526A009155F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		142DC9EB2F7D526A009155F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		142DC9CB2F7D5268009155F3 = {
+			isa = PBXGroup;
+			children = (
+				142DC9D62F7D5268009155F3 /* NurseryConnectDriver */,
+				142DC9E72F7D526A009155F3 /* NurseryConnectDriverTests */,
+				142DC9F12F7D526A009155F3 /* NurseryConnectDriverUITests */,
+				142DC9D52F7D5268009155F3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		142DC9D52F7D5268009155F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				142DC9D42F7D5268009155F3 /* NurseryConnectDriver.app */,
+				142DC9E42F7D526A009155F3 /* NurseryConnectDriverTests.xctest */,
+				142DC9EE2F7D526A009155F3 /* NurseryConnectDriverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		142DC9D62F7D5268009155F3 /* NurseryConnectDriver */ = {
+			isa = PBXGroup;
+			children = (
+				142DC9D72F7D5268009155F3 /* NurseryConnectDriverApp.swift */,
+				142DC9D92F7D5268009155F3 /* ContentView.swift */,
+				142DC9DB2F7D526A009155F3 /* Assets.xcassets */,
+				142DC9DD2F7D526A009155F3 /* Preview Content */,
+			);
+			path = NurseryConnectDriver;
+			sourceTree = "<group>";
+		};
+		142DC9DD2F7D526A009155F3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				142DC9DE2F7D526A009155F3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		142DC9E72F7D526A009155F3 /* NurseryConnectDriverTests */ = {
+			isa = PBXGroup;
+			children = (
+				142DC9E82F7D526A009155F3 /* NurseryConnectDriverTests.swift */,
+			);
+			path = NurseryConnectDriverTests;
+			sourceTree = "<group>";
+		};
+		142DC9F12F7D526A009155F3 /* NurseryConnectDriverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				142DC9F22F7D526A009155F3 /* NurseryConnectDriverUITests.swift */,
+				142DC9F42F7D526A009155F3 /* NurseryConnectDriverUITestsLaunchTests.swift */,
+			);
+			path = NurseryConnectDriverUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		142DC9D32F7D5268009155F3 /* NurseryConnectDriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 142DC9F82F7D526A009155F3 /* Build configuration list for PBXNativeTarget "NurseryConnectDriver" */;
+			buildPhases = (
+				142DC9D02F7D5268009155F3 /* Sources */,
+				142DC9D12F7D5268009155F3 /* Frameworks */,
+				142DC9D22F7D5268009155F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NurseryConnectDriver;
+			productName = NurseryConnectDriver;
+			productReference = 142DC9D42F7D5268009155F3 /* NurseryConnectDriver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		142DC9E32F7D526A009155F3 /* NurseryConnectDriverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 142DC9FB2F7D526A009155F3 /* Build configuration list for PBXNativeTarget "NurseryConnectDriverTests" */;
+			buildPhases = (
+				142DC9E02F7D526A009155F3 /* Sources */,
+				142DC9E12F7D526A009155F3 /* Frameworks */,
+				142DC9E22F7D526A009155F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				142DC9E62F7D526A009155F3 /* PBXTargetDependency */,
+			);
+			name = NurseryConnectDriverTests;
+			productName = NurseryConnectDriverTests;
+			productReference = 142DC9E42F7D526A009155F3 /* NurseryConnectDriverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		142DC9ED2F7D526A009155F3 /* NurseryConnectDriverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 142DC9FE2F7D526A009155F3 /* Build configuration list for PBXNativeTarget "NurseryConnectDriverUITests" */;
+			buildPhases = (
+				142DC9EA2F7D526A009155F3 /* Sources */,
+				142DC9EB2F7D526A009155F3 /* Frameworks */,
+				142DC9EC2F7D526A009155F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				142DC9F02F7D526A009155F3 /* PBXTargetDependency */,
+			);
+			name = NurseryConnectDriverUITests;
+			productName = NurseryConnectDriverUITests;
+			productReference = 142DC9EE2F7D526A009155F3 /* NurseryConnectDriverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		142DC9CC2F7D5268009155F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					142DC9D32F7D5268009155F3 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					142DC9E32F7D526A009155F3 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 142DC9D32F7D5268009155F3;
+					};
+					142DC9ED2F7D526A009155F3 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 142DC9D32F7D5268009155F3;
+					};
+				};
+			};
+			buildConfigurationList = 142DC9CF2F7D5268009155F3 /* Build configuration list for PBXProject "NurseryConnectDriver" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 142DC9CB2F7D5268009155F3;
+			productRefGroup = 142DC9D52F7D5268009155F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				142DC9D32F7D5268009155F3 /* NurseryConnectDriver */,
+				142DC9E32F7D526A009155F3 /* NurseryConnectDriverTests */,
+				142DC9ED2F7D526A009155F3 /* NurseryConnectDriverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		142DC9D22F7D5268009155F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				142DC9DF2F7D526A009155F3 /* Preview Assets.xcassets in Resources */,
+				142DC9DC2F7D526A009155F3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		142DC9E22F7D526A009155F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		142DC9EC2F7D526A009155F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		142DC9D02F7D5268009155F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				142DC9DA2F7D5268009155F3 /* ContentView.swift in Sources */,
+				142DC9D82F7D5268009155F3 /* NurseryConnectDriverApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		142DC9E02F7D526A009155F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				142DC9E92F7D526A009155F3 /* NurseryConnectDriverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		142DC9EA2F7D526A009155F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				142DC9F52F7D526A009155F3 /* NurseryConnectDriverUITestsLaunchTests.swift in Sources */,
+				142DC9F32F7D526A009155F3 /* NurseryConnectDriverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		142DC9E62F7D526A009155F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 142DC9D32F7D5268009155F3 /* NurseryConnectDriver */;
+			targetProxy = 142DC9E52F7D526A009155F3 /* PBXContainerItemProxy */;
+		};
+		142DC9F02F7D526A009155F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 142DC9D32F7D5268009155F3 /* NurseryConnectDriver */;
+			targetProxy = 142DC9EF2F7D526A009155F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		142DC9F62F7D526A009155F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		142DC9F72F7D526A009155F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		142DC9F92F7D526A009155F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NurseryConnectDriver/Preview Content\"";
+				DEVELOPMENT_TEAM = VTZK896352;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IT22118318.NurseryConnectDriver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		142DC9FA2F7D526A009155F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NurseryConnectDriver/Preview Content\"";
+				DEVELOPMENT_TEAM = VTZK896352;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IT22118318.NurseryConnectDriver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		142DC9FC2F7D526A009155F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VTZK896352;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IT22118318.NurseryConnectDriverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NurseryConnectDriver.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NurseryConnectDriver";
+			};
+			name = Debug;
+		};
+		142DC9FD2F7D526A009155F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VTZK896352;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IT22118318.NurseryConnectDriverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NurseryConnectDriver.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NurseryConnectDriver";
+			};
+			name = Release;
+		};
+		142DC9FF2F7D526A009155F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VTZK896352;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IT22118318.NurseryConnectDriverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NurseryConnectDriver;
+			};
+			name = Debug;
+		};
+		142DCA002F7D526A009155F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VTZK896352;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IT22118318.NurseryConnectDriverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NurseryConnectDriver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		142DC9CF2F7D5268009155F3 /* Build configuration list for PBXProject "NurseryConnectDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				142DC9F62F7D526A009155F3 /* Debug */,
+				142DC9F72F7D526A009155F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		142DC9F82F7D526A009155F3 /* Build configuration list for PBXNativeTarget "NurseryConnectDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				142DC9F92F7D526A009155F3 /* Debug */,
+				142DC9FA2F7D526A009155F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		142DC9FB2F7D526A009155F3 /* Build configuration list for PBXNativeTarget "NurseryConnectDriverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				142DC9FC2F7D526A009155F3 /* Debug */,
+				142DC9FD2F7D526A009155F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		142DC9FE2F7D526A009155F3 /* Build configuration list for PBXNativeTarget "NurseryConnectDriverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				142DC9FF2F7D526A009155F3 /* Debug */,
+				142DCA002F7D526A009155F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 142DC9CC2F7D5268009155F3 /* Project object */;
+}
