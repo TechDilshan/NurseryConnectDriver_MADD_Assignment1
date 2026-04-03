@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @State private var showSplash = true
+
     var body: some View {
-        MainTabView()
+        Group {
+            if showSplash {
+                SplashView()
+            } else if authViewModel.isLoggedIn {
+                MainTabView()
+            } else {
+                LoginView()
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                withAnimation {
+                    showSplash = false
+                }
+            }
+        }
     }
 }
 
@@ -17,8 +35,5 @@ struct ContentView: View {
     ContentView()
         .environmentObject(TransportViewModel())
         .environmentObject(LocationViewModel())
-}
-
-#Preview {
-    ContentView()
+        .environmentObject(AuthViewModel())
 }

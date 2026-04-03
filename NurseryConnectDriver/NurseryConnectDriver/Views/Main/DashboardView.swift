@@ -3,6 +3,7 @@ import SwiftUI
 struct DashboardView: View {
     @EnvironmentObject var transportViewModel: TransportViewModel
     @EnvironmentObject var locationViewModel: LocationViewModel
+    @EnvironmentObject var authViewModel: AuthViewModel
 
     var body: some View {
         NavigationStack {
@@ -12,7 +13,7 @@ struct DashboardView: View {
 
                     InfoCardView(
                         title: "Driver",
-                        value: transportViewModel.trip.driverName,
+                        value: authViewModel.currentUser?.fullName ?? transportViewModel.trip.driverName,
                         systemImage: "person.crop.circle.fill"
                     )
 
@@ -39,7 +40,7 @@ struct DashboardView: View {
 
                         InfoCardView(
                             title: "Vehicle",
-                            value: transportViewModel.trip.vehicleNumber,
+                            value: authViewModel.currentUser?.vehicleNumber ?? transportViewModel.trip.vehicleNumber,
                             systemImage: "car.fill"
                         )
                     }
@@ -83,6 +84,12 @@ struct DashboardView: View {
                         } label: {
                             PrimaryButton(title: "Open Live Map", systemImage: "map.fill")
                         }
+
+                        NavigationLink {
+                            TripSummaryView()
+                        } label: {
+                            PrimaryButton(title: "View Trip Summary", systemImage: "doc.text.fill")
+                        }
                     }
                 }
                 .padding()
@@ -119,4 +126,5 @@ struct DashboardView: View {
     DashboardView()
         .environmentObject(TransportViewModel())
         .environmentObject(LocationViewModel())
+        .environmentObject(AuthViewModel())
 }

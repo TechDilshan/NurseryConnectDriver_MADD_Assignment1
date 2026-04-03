@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14024B122F801FE50058C6C3 /* DriverUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14024B112F801FE50058C6C3 /* DriverUser.swift */; };
+		14024B142F801FF50058C6C3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14024B132F801FF50058C6C3 /* AuthViewModel.swift */; };
+		14024B172F8020140058C6C3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14024B162F8020140058C6C3 /* LoginView.swift */; };
+		14024B192F80201D0058C6C3 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14024B182F80201D0058C6C3 /* SplashView.swift */; };
+		14024B1B2F80203A0058C6C3 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14024B1A2F80203A0058C6C3 /* AuthService.swift */; };
+		14024B1D2F8020430058C6C3 /* SessionStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14024B1C2F8020430058C6C3 /* SessionStorageService.swift */; };
 		142DC9D82F7D5268009155F3 /* NurseryConnectDriverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DC9D72F7D5268009155F3 /* NurseryConnectDriverApp.swift */; };
 		142DC9DA2F7D5268009155F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DC9D92F7D5268009155F3 /* ContentView.swift */; };
 		142DC9DC2F7D526A009155F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 142DC9DB2F7D526A009155F3 /* Assets.xcassets */; };
@@ -64,6 +70,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14024B112F801FE50058C6C3 /* DriverUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverUser.swift; sourceTree = "<group>"; };
+		14024B132F801FF50058C6C3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		14024B162F8020140058C6C3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		14024B182F80201D0058C6C3 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		14024B1A2F80203A0058C6C3 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		14024B1C2F8020430058C6C3 /* SessionStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStorageService.swift; sourceTree = "<group>"; };
 		142DC9D42F7D5268009155F3 /* NurseryConnectDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseryConnectDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		142DC9D72F7D5268009155F3 /* NurseryConnectDriverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseryConnectDriverApp.swift; sourceTree = "<group>"; };
 		142DC9D92F7D5268009155F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -131,6 +143,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14024B152F8020080058C6C3 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				14024B162F8020140058C6C3 /* LoginView.swift */,
+				14024B182F80201D0058C6C3 /* SplashView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		142DC9CB2F7D5268009155F3 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +222,7 @@
 				142DCA152F7D53E7009155F3 /* DriverLocation.swift */,
 				142DCA172F7D53F2009155F3 /* TransportStatus.swift */,
 				142DCA192F7D53FE009155F3 /* RouteStop.swift */,
+				14024B112F801FE50058C6C3 /* DriverUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +232,7 @@
 			children = (
 				142DCA1B2F7D5409009155F3 /* TransportViewModel.swift */,
 				142DCA1D2F7D5412009155F3 /* LocationViewModel.swift */,
+				14024B132F801FF50058C6C3 /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -217,6 +240,7 @@
 		142DCA052F7D5349009155F3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				14024B152F8020080058C6C3 /* Auth */,
 				142DCA102F7D53AD009155F3 /* Settings */,
 				142DCA0F2F7D53A5009155F3 /* Components */,
 				142DCA0E2F7D539B009155F3 /* Map */,
@@ -233,6 +257,8 @@
 				142DCA212F7D57A0009155F3 /* StorageService.swift */,
 				142DCA232F7D57B1009155F3 /* MockDataService.swift */,
 				142DCA252F7D57C6009155F3 /* LocationService.swift */,
+				14024B1A2F80203A0058C6C3 /* AuthService.swift */,
+				14024B1C2F8020430058C6C3 /* SessionStorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -439,13 +465,16 @@
 				142DCA1A2F7D53FE009155F3 /* RouteStop.swift in Sources */,
 				142DC9DA2F7D5268009155F3 /* ContentView.swift in Sources */,
 				142DC9D82F7D5268009155F3 /* NurseryConnectDriverApp.swift in Sources */,
+				14024B1B2F80203A0058C6C3 /* AuthService.swift in Sources */,
 				1491FE082F7D5A1300128EA4 /* TransportListView.swift in Sources */,
 				142DCA162F7D53E7009155F3 /* DriverLocation.swift in Sources */,
 				142DCA1C2F7D5409009155F3 /* TransportViewModel.swift in Sources */,
 				1491FE1C2F7D5AF500128EA4 /* EmptyStateView.swift in Sources */,
 				1491FE182F7D5AE500128EA4 /* ChildRowView.swift in Sources */,
 				142DCA242F7D57B1009155F3 /* MockDataService.swift in Sources */,
+				14024B1D2F8020430058C6C3 /* SessionStorageService.swift in Sources */,
 				142DCA2A2F7D57DC009155F3 /* DateFormatterHelper.swift in Sources */,
+				14024B172F8020140058C6C3 /* LoginView.swift in Sources */,
 				142DCA142F7D53DA009155F3 /* TransportTrip.swift in Sources */,
 				142DCA122F7D53CC009155F3 /* Child.swift in Sources */,
 				1491FE0A2F7D5AA300128EA4 /* ChildDetailView.swift in Sources */,
@@ -458,12 +487,15 @@
 				1491FE0E2F7D5AB800128EA4 /* TripSummaryView.swift in Sources */,
 				1491FE1A2F7D5AEE00128EA4 /* PrimaryButton.swift in Sources */,
 				142DCA262F7D57C6009155F3 /* LocationService.swift in Sources */,
+				14024B122F801FE50058C6C3 /* DriverUser.swift in Sources */,
 				142DCA2D2F7D57F8009155F3 /* Extensions.swift in Sources */,
 				1491FE162F7D5ADB00128EA4 /* RouteInfoCardView.swift in Sources */,
 				1491FE062F7D5A0800128EA4 /* DashboardView.swift in Sources */,
+				14024B192F80201D0058C6C3 /* SplashView.swift in Sources */,
 				142DCA182F7D53F2009155F3 /* TransportStatus.swift in Sources */,
 				142DCA282F7D57D3009155F3 /* Constants.swift in Sources */,
 				142DCA222F7D57A0009155F3 /* StorageService.swift in Sources */,
+				14024B142F801FF50058C6C3 /* AuthViewModel.swift in Sources */,
 				1491FE202F7D5B0500128EA4 /* InfoCardView.swift in Sources */,
 				1491FE222F7D5B0F00128EA4 /* SettingsView.swift in Sources */,
 				142DCA202F7D5795009155F3 /* DataService.swift in Sources */,
