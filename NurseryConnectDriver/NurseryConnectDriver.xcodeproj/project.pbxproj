@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14024B252F8039AF0058C6C3 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14024B242F8039AE0058C6C3 /* AppTheme.swift */; };
+		14024B272F8039BF0058C6C3 /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14024B262F8039BF0058C6C3 /* ThemeService.swift */; };
+		14024B292F8039D40058C6C3 /* ThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14024B282F8039D40058C6C3 /* ThemeViewModel.swift */; };
 		142DC9D82F7D5268009155F3 /* NurseryConnectDriverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DC9D72F7D5268009155F3 /* NurseryConnectDriverApp.swift */; };
 		142DC9DA2F7D5268009155F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DC9D92F7D5268009155F3 /* ContentView.swift */; };
 		142DC9DC2F7D526A009155F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 142DC9DB2F7D526A009155F3 /* Assets.xcassets */; };
@@ -64,6 +67,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14024B242F8039AE0058C6C3 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		14024B262F8039BF0058C6C3 /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
+		14024B282F8039D40058C6C3 /* ThemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewModel.swift; sourceTree = "<group>"; };
 		142DC9D42F7D5268009155F3 /* NurseryConnectDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseryConnectDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		142DC9D72F7D5268009155F3 /* NurseryConnectDriverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseryConnectDriverApp.swift; sourceTree = "<group>"; };
 		142DC9D92F7D5268009155F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 				142DCA152F7D53E7009155F3 /* DriverLocation.swift */,
 				142DCA172F7D53F2009155F3 /* TransportStatus.swift */,
 				142DCA192F7D53FE009155F3 /* RouteStop.swift */,
+				14024B242F8039AE0058C6C3 /* AppTheme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +217,7 @@
 			children = (
 				142DCA1B2F7D5409009155F3 /* TransportViewModel.swift */,
 				142DCA1D2F7D5412009155F3 /* LocationViewModel.swift */,
+				14024B282F8039D40058C6C3 /* ThemeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -233,6 +241,7 @@
 				142DCA212F7D57A0009155F3 /* StorageService.swift */,
 				142DCA232F7D57B1009155F3 /* MockDataService.swift */,
 				142DCA252F7D57C6009155F3 /* LocationService.swift */,
+				14024B262F8039BF0058C6C3 /* ThemeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -438,6 +447,7 @@
 			files = (
 				142DCA1A2F7D53FE009155F3 /* RouteStop.swift in Sources */,
 				142DC9DA2F7D5268009155F3 /* ContentView.swift in Sources */,
+				14024B292F8039D40058C6C3 /* ThemeViewModel.swift in Sources */,
 				142DC9D82F7D5268009155F3 /* NurseryConnectDriverApp.swift in Sources */,
 				1491FE082F7D5A1300128EA4 /* TransportListView.swift in Sources */,
 				142DCA162F7D53E7009155F3 /* DriverLocation.swift in Sources */,
@@ -450,6 +460,7 @@
 				142DCA122F7D53CC009155F3 /* Child.swift in Sources */,
 				1491FE0A2F7D5AA300128EA4 /* ChildDetailView.swift in Sources */,
 				1491FE142F7D5AD200128EA4 /* DriverMapView.swift in Sources */,
+				14024B272F8039BF0058C6C3 /* ThemeService.swift in Sources */,
 				1491FE042F7D59FF00128EA4 /* MainTabView.swift in Sources */,
 				1491FE1E2F7D5AFD00128EA4 /* SectionHeaderView.swift in Sources */,
 				1491FE102F7D5AC000128EA4 /* StatusBadgeView.swift in Sources */,
@@ -465,6 +476,7 @@
 				142DCA282F7D57D3009155F3 /* Constants.swift in Sources */,
 				142DCA222F7D57A0009155F3 /* StorageService.swift in Sources */,
 				1491FE202F7D5B0500128EA4 /* InfoCardView.swift in Sources */,
+				14024B252F8039AF0058C6C3 /* AppTheme.swift in Sources */,
 				1491FE222F7D5B0F00128EA4 /* SettingsView.swift in Sources */,
 				142DCA202F7D5795009155F3 /* DataService.swift in Sources */,
 			);

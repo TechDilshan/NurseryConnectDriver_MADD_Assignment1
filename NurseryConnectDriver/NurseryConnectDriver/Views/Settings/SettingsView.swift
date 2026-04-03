@@ -3,15 +3,22 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var transportViewModel: TransportViewModel
     @EnvironmentObject var locationViewModel: LocationViewModel
+    @EnvironmentObject var themeViewModel: ThemeViewModel
+
     @State private var showResetConfirmation = false
 
     var body: some View {
         NavigationStack {
             Form {
-                Section("App Information") {
-                    LabeledContent("Role", value: "Driver")
-                    LabeledContent("App", value: "NurseryConnect Driver")
-                    LabeledContent("Vehicle", value: transportViewModel.trip.vehicleNumber)
+                Section("Appearance") {
+                    Picker("Theme", selection: $themeViewModel.selectedTheme) {
+                        ForEach(AppTheme.allCases, id: \.self) { theme in
+                            Text(theme.displayName).tag(theme)
+                        }
+                    }
+                    .onChange(of: themeViewModel.selectedTheme) {
+                        themeViewModel.updateTheme(themeViewModel.selectedTheme)
+                    }
                 }
 
                 Section("Trip Actions") {
@@ -19,14 +26,14 @@ struct SettingsView: View {
                         showResetConfirmation = true
                     }
 
-                    Button("Reset Map Simulation") {
+                    Button("Reset Route Simulation") {
                         locationViewModel.resetSimulation()
                     }
                 }
 
                 Section("Summary") {
                     LabeledContent("Pending", value: "\(transportViewModel.pendingCount)")
-                    LabeledContent("Picked Up", value: "\(transportViewModel.pickedUpCount)")
+                    LabeledContent("On Board", value: "\(transportViewModel.pickedUpCount)")
                     LabeledContent("Dropped Off", value: "\(transportViewModel.droppedOffCount)")
                 }
             }
@@ -50,4 +57,5 @@ struct SettingsView: View {
     SettingsView()
         .environmentObject(TransportViewModel())
         .environmentObject(LocationViewModel())
+        .environmentObject(ThemeViewModel())
 }
