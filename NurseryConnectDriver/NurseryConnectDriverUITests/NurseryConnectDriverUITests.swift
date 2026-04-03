@@ -1,41 +1,59 @@
-//
-//  NurseryConnectDriverUITests.swift
-//  NurseryConnectDriverUITests
-//
-//  Created by chamika dilshan on 2026-04-01.
-//
-
 import XCTest
+@testable import NurseryConnectDriver
 
-final class NurseryConnectDriverUITests: XCTestCase {
+final class NurseryConnectDriverTests: XCTestCase {
+    @MainActor
+    func testMarkPickedUpChangesStatus() {
+        let viewModel = TransportViewModel(
+            storageService: MockStorageService(),
+            dataService: MockDataService()
+        )
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let child = viewModel.children[0]
+        viewModel.markPickedUp(child: child)
 
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        XCTAssertEqual(viewModel.children[0].status, .pickedUp)
+        XCTAssertNotNil(viewModel.children[0].pickupTime)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    @MainActor
+    func testCannotDropOffBeforePickup() {
+        let viewModel = TransportViewModel(
+            storageService: MockStorageService(),
+            dataService: MockDataService()
+        )
+
+        let child = viewModel.children[0]
+        viewModel.markDroppedOff(child: child)
+
+        XCTAssertEqual(viewModel.children[0].status, .pending)
+        XCTAssertEqual(viewModel.errorMessage, "You must mark the child as picked up before drop off.")
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
+    @MainActor
+    func testResetTripRestoresPendingStatus() {
+        let viewModel = TransportViewModel(
+            storageService: MockStorageService(),
+            dataService: MockDataService()
+        )
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let child = viewModel.children[0]
+        viewModel.markPickedUp(child: child)
+        viewModel.resetTrip()
+
+        XCTAssertTrue(viewModel.children.allSatisfy { $0.status == .pending })
+        XCTAssertEqual(viewModel.pendingCount, viewModel.children.count)
+    }
+}
+
+final class MockStorageService: StorageServiceProtocol {
+    private var storedTrip: TransportTrip?
+
+    func saveTrip(_ trip: TransportTrip) {
+        storedTrip = trip
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+    func loadTrip() -> TransportTrip? {
+        storedTrip
     }
 }
