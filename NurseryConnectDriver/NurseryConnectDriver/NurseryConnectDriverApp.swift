@@ -11,14 +11,12 @@ import SwiftUI
 struct NurseryConnectDriverApp: App {
     @StateObject private var transportViewModel = TransportViewModel()
     @StateObject private var locationViewModel = LocationViewModel()
-    @StateObject private var authViewModel = AuthViewModel()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(transportViewModel)
                 .environmentObject(locationViewModel)
-                .environmentObject(authViewModel)
         }
     }
 }

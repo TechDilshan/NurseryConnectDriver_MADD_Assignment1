@@ -31,5 +31,4 @@ struct MainTabView: View {
     MainTabView()
         .environmentObject(TransportViewModel())
         .environmentObject(LocationViewModel())
-        .environmentObject(AuthViewModel())
 }
