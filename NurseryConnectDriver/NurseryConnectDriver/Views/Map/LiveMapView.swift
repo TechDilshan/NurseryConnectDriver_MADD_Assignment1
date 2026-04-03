@@ -21,20 +21,20 @@ struct LiveMapView: View {
                             locationViewModel.startSimulation()
                             transportViewModel.startTripIfNeeded()
                         } label: {
-                            PrimaryButton(title: "Start", systemImage: "play.fill")
+                            PrimaryButton(title: "Start Route", systemImage: "play.fill")
                         }
 
                         Button {
                             locationViewModel.stopSimulation()
                         } label: {
-                            PrimaryButton(title: "Stop", systemImage: "pause.fill")
+                            PrimaryButton(title: "Stop Route", systemImage: "pause.fill")
                         }
                     }
 
                     Button {
                         locationViewModel.resetSimulation()
                     } label: {
-                        PrimaryButton(title: "Reset Map", systemImage: "arrow.clockwise")
+                        PrimaryButton(title: "Reset Route Simulation", systemImage: "arrow.clockwise")
                     }
 
                     VStack(alignment: .leading, spacing: 12) {
@@ -45,6 +45,7 @@ struct LiveMapView: View {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(stop.title)
                                     .font(.subheadline.weight(.semibold))
+
                                 Text(stop.subtitle)
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
@@ -59,7 +60,7 @@ struct LiveMapView: View {
                 .padding()
             }
             .background(Color.appGroupedBackground)
-            .navigationTitle("Live Map")
+            .navigationTitle("Live Route")
         }
     }
 }

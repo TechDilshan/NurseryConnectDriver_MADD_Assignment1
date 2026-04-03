@@ -10,12 +10,12 @@ struct MainTabView: View {
 
             TransportListView()
                 .tabItem {
-                    Label("Transport", systemImage: "person.3.fill")
+                    Label("Manifest", systemImage: "person.3.fill")
                 }
 
             LiveMapView()
                 .tabItem {
-                    Label("Map", systemImage: "map.fill")
+                    Label("Route", systemImage: "map.fill")
                 }
 
             SettingsView()
@@ -31,4 +31,5 @@ struct MainTabView: View {
     MainTabView()
         .environmentObject(TransportViewModel())
         .environmentObject(LocationViewModel())
+        .environmentObject(ThemeViewModel())
 }

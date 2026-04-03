@@ -16,7 +16,7 @@ struct TransportTrip: Identifiable, Codable {
         tripDate: Date = Date(),
         startTime: Date? = nil,
         endTime: Date? = nil,
-        driverName: String = "Daniel Perera",
+        driverName: String = "Driver",
         vehicleNumber: String = "NCD-1024",
         children: [Child] = [],
         isTripStarted: Bool = false,
@@ -45,11 +45,11 @@ struct TransportTrip: Identifiable, Codable {
         children.filter { $0.status == .droppedOff }.count
     }
 
-    var onboardCount: Int {
-        pickedUpCount
-    }
-
     var totalCount: Int {
         children.count
+    }
+
+    var isActive: Bool {
+        isTripStarted && !isTripCompleted
     }
 }

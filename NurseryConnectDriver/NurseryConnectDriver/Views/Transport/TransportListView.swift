@@ -23,10 +23,10 @@ struct TransportListView: View {
                         }
                     }
                     .listStyle(.plain)
-                    .searchable(text: $transportViewModel.searchText, prompt: "Search children")
+                    .searchable(text: $transportViewModel.searchText, prompt: "Search by child or school")
                 }
             }
-            .navigationTitle("Transport List")
+            .navigationTitle("Today's Manifest")
         }
     }
 }

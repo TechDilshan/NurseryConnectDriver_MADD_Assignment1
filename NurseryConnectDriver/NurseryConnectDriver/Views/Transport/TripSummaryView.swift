@@ -7,6 +7,13 @@ struct TripSummaryView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 16) {
+                    TripStatusBannerView(
+                        title: transportViewModel.tripStatusTitle,
+                        subtitle: transportViewModel.tripStatusSubtitle,
+                        isCompleted: transportViewModel.trip.isTripCompleted,
+                        isActive: transportViewModel.trip.isTripStarted && !transportViewModel.trip.isTripCompleted
+                    )
+
                     InfoCardView(
                         title: "Total Children",
                         value: "\(transportViewModel.trip.totalCount)",
@@ -20,7 +27,7 @@ struct TripSummaryView: View {
                     )
 
                     InfoCardView(
-                        title: "Picked Up",
+                        title: "On Board",
                         value: "\(transportViewModel.pickedUpCount)",
                         systemImage: "bus.fill"
                     )

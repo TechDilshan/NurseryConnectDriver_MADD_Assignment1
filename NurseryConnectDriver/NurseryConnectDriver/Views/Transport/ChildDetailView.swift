@@ -16,7 +16,7 @@ struct ChildDetailView: View {
                         VStack(spacing: 12) {
                             Circle()
                                 .fill(Color.blue.opacity(0.15))
-                                .frame(width: 80, height: 80)
+                                .frame(width: 88, height: 88)
                                 .overlay {
                                     Text(child.initials)
                                         .font(.title2.bold())
@@ -30,22 +30,26 @@ struct ChildDetailView: View {
                         }
                         .frame(maxWidth: .infinity)
 
-                        Group {
-                            detailCard(title: "Age", value: "\(child.age)")
-                            detailCard(title: "School", value: child.schoolName)
-                            detailCard(title: "Pickup Location", value: child.pickupLocation)
-                            detailCard(title: "Dropoff Location", value: child.dropoffLocation)
-                            detailCard(title: "Guardian", value: child.guardianName)
-                            detailCard(title: "Guardian Contact", value: child.guardianContact)
-                            detailCard(title: "Pickup Time", value: DateFormatterHelper.displayDateTime(child.pickupTime))
-                            detailCard(title: "Dropoff Time", value: DateFormatterHelper.displayDateTime(child.dropoffTime))
-                        }
+                        Text("Transport Information")
+                            .font(.headline)
 
-                        VStack(spacing: 12) {
+                        detailCard(title: "School", value: child.schoolName)
+                        detailCard(title: "Pickup Point", value: child.pickupLocation)
+                        detailCard(title: "Dropoff Point", value: child.dropoffLocation)
+                        detailCard(title: "Pickup Time", value: DateFormatterHelper.displayTimeOnly(child.pickupTime))
+                        detailCard(title: "Dropoff Time", value: DateFormatterHelper.displayTimeOnly(child.dropoffTime))
+
+                        Text("Emergency Contact")
+                            .font(.headline)
+
+                        detailCard(title: "Guardian Name", value: child.guardianName)
+                        detailCard(title: "Guardian Contact", value: child.guardianContact)
+
+                        VStack(spacing: 14) {
                             Button {
                                 transportViewModel.markPickedUp(child: child)
                             } label: {
-                                PrimaryButton(title: "Mark as Picked Up", systemImage: "arrow.up.circle.fill")
+                                PrimaryButton(title: "Mark as On Board", systemImage: "arrow.up.circle.fill")
                             }
                             .disabled(child.status != .pending)
 

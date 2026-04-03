@@ -21,6 +21,6 @@ struct PrimaryButton: View {
 }
 
 #Preview {
-    PrimaryButton(title: "Start Trip", systemImage: "play.fill")
+    PrimaryButton(title: "Start Route", systemImage: "play.fill")
         .padding()
 }

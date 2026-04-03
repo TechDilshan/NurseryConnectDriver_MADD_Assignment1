@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+import UIKit
 
 @MainActor
 final class TransportViewModel: ObservableObject {
@@ -32,11 +33,14 @@ final class TransportViewModel: ObservableObject {
     }
 
     var filteredChildren: [Child] {
-        if searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+        let trimmed = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        if trimmed.isEmpty {
             return children
         }
 
-        let query = searchText.lowercased()
+        let query = trimmed.lowercased()
+
         return children.filter {
             $0.name.lowercased().contains(query) ||
             $0.schoolName.lowercased().contains(query) ||
@@ -65,56 +69,88 @@ final class TransportViewModel: ObservableObject {
         return Double(droppedOffCount) / Double(children.count)
     }
 
+    var tripStatusTitle: String {
+        if trip.isTripCompleted {
+            return "Trip Completed"
+        } else if trip.isTripStarted {
+            return "Trip In Progress"
+        } else {
+            return "Trip Not Started"
+        }
+    }
+
+    var tripStatusSubtitle: String {
+        if trip.isTripCompleted {
+            return "All children have been safely dropped off."
+        } else if trip.isTripStarted {
+            return "\(onboardCount) child(ren) currently on board."
+        } else {
+            return "Start by marking the first child as picked up."
+        }
+    }
+
     func child(withID id: String) -> Child? {
         children.first(where: { $0.id == id })
     }
 
     func startTripIfNeeded() {
-        if !trip.isTripStarted {
+        guard !trip.isTripStarted else { return }
+
+        withAnimation(.easeInOut) {
             trip.isTripStarted = true
             trip.startTime = Date()
-            saveChanges()
-            showSuccess("Trip started successfully.")
         }
+
+        saveChanges()
     }
 
     func markPickedUp(child: Child) {
         guard let index = children.firstIndex(where: { $0.id == child.id }) else { return }
 
-        if children[index].status == .droppedOff {
-            showError("This child has already been dropped off.")
+        if children[index].status == .pickedUp {
+            showError("This child is already marked as on board.")
+            hapticError()
             return
         }
 
-        if children[index].status == .pickedUp {
-            showError("This child is already marked as picked up.")
+        if children[index].status == .droppedOff {
+            showError("This child has already been dropped off.")
+            hapticError()
             return
         }
 
         startTripIfNeeded()
 
-        children[index].status = .pickedUp
-        children[index].pickupTime = Date()
-        syncTripChildren()
+        withAnimation(.spring()) {
+            children[index].status = .pickedUp
+            children[index].pickupTime = Date()
+        }
 
-        showSuccess("\(children[index].name) marked as picked up.")
+        syncTripChildren()
+        showSuccess("\(children[index].name) marked as on board.")
+        hapticSuccess()
     }
 
     func markDroppedOff(child: Child) {
         guard let index = children.firstIndex(where: { $0.id == child.id }) else { return }
 
         if children[index].status == .pending {
-            showError("You must mark the child as picked up before drop off.")
+            showError("You must mark the child as on board before drop off.")
+            hapticError()
             return
         }
 
         if children[index].status == .droppedOff {
             showError("This child is already marked as dropped off.")
+            hapticError()
             return
         }
 
-        children[index].status = .droppedOff
-        children[index].dropoffTime = Date()
+        withAnimation(.spring()) {
+            children[index].status = .droppedOff
+            children[index].dropoffTime = Date()
+        }
+
         syncTripChildren()
 
         if droppedOffCount == children.count && !children.isEmpty {
@@ -126,19 +162,17 @@ final class TransportViewModel: ObservableObject {
         }
 
         saveChanges()
+        hapticSuccess()
     }
 
     func resetTrip() {
-        children = dataService.loadChildren()
-        trip = TransportTrip(children: children)
+        withAnimation(.easeInOut) {
+            children = dataService.loadChildren()
+            trip = TransportTrip(children: children)
+        }
+
         saveChanges()
         showSuccess("Trip data reset successfully.")
-    }
-
-    func updateChild(_ child: Child) {
-        guard let index = children.firstIndex(where: { $0.id == child.id }) else { return }
-        children[index] = child
-        syncTripChildren()
     }
 
     private func syncTripChildren() {
@@ -159,5 +193,15 @@ final class TransportViewModel: ObservableObject {
     private func showSuccess(_ message: String) {
         successMessage = message
         errorMessage = nil
+    }
+
+    private func hapticSuccess() {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+    }
+
+    private func hapticError() {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.error)
     }
 }

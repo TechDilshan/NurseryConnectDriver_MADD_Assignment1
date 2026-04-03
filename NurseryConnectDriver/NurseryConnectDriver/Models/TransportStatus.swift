@@ -10,7 +10,7 @@ enum TransportStatus: String, Codable, CaseIterable {
         case .pending:
             return "Pending"
         case .pickedUp:
-            return "Picked Up"
+            return "On Board"
         case .droppedOff:
             return "Dropped Off"
         }

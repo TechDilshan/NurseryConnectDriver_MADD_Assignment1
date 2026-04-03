@@ -8,12 +8,22 @@ struct DashboardView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
-                    SectionHeaderView(title: "Driver Summary", subtitle: "Today's transport overview")
+                    SectionHeaderView(
+                        title: "Driver Dashboard",
+                        subtitle: "Manage child transport and route progress"
+                    )
+
+                    TripStatusBannerView(
+                        title: transportViewModel.tripStatusTitle,
+                        subtitle: transportViewModel.tripStatusSubtitle,
+                        isCompleted: transportViewModel.trip.isTripCompleted,
+                        isActive: transportViewModel.trip.isTripStarted && !transportViewModel.trip.isTripCompleted
+                    )
 
                     InfoCardView(
-                        title: "Driver",
-                        value: transportViewModel.trip.driverName,
-                        systemImage: "person.crop.circle.fill"
+                        title: "Vehicle",
+                        value: transportViewModel.trip.vehicleNumber,
+                        systemImage: "car.fill"
                     )
 
                     HStack(spacing: 12) {
@@ -38,9 +48,9 @@ struct DashboardView: View {
                         )
 
                         InfoCardView(
-                            title: "Vehicle",
-                            value: transportViewModel.trip.vehicleNumber,
-                            systemImage: "car.fill"
+                            title: "Total Children",
+                            value: "\(transportViewModel.trip.totalCount)",
+                            systemImage: "person.3.fill"
                         )
                     }
 
@@ -60,28 +70,29 @@ struct DashboardView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .shadow(color: .black.opacity(0.05), radius: 6, x: 0, y: 3)
 
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("Live Transport Status")
-                            .font(.headline)
-
-                        RouteInfoCardView(
-                            title: locationViewModel.tripStatusText,
-                            subtitle: locationViewModel.estimatedArrivalText,
-                            systemImage: "location.fill"
-                        )
-                    }
+                    RouteInfoCardView(
+                        title: locationViewModel.tripStatusText,
+                        subtitle: locationViewModel.estimatedArrivalText,
+                        systemImage: "location.fill"
+                    )
 
                     VStack(spacing: 12) {
                         NavigationLink {
                             TransportListView()
                         } label: {
-                            PrimaryButton(title: "Open Transport List", systemImage: "list.bullet")
+                            PrimaryButton(title: "Open Today's Manifest", systemImage: "list.bullet.rectangle.fill")
                         }
 
                         NavigationLink {
                             LiveMapView()
                         } label: {
-                            PrimaryButton(title: "Open Live Map", systemImage: "map.fill")
+                            PrimaryButton(title: "Open Live Route", systemImage: "map.fill")
+                        }
+
+                        NavigationLink {
+                            TripSummaryView()
+                        } label: {
+                            PrimaryButton(title: "View Trip Summary", systemImage: "doc.text.fill")
                         }
                     }
                 }

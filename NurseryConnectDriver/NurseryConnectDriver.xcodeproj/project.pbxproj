@@ -10,6 +10,7 @@
 		14024B252F8039AF0058C6C3 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14024B242F8039AE0058C6C3 /* AppTheme.swift */; };
 		14024B272F8039BF0058C6C3 /* ThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14024B262F8039BF0058C6C3 /* ThemeService.swift */; };
 		14024B292F8039D40058C6C3 /* ThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14024B282F8039D40058C6C3 /* ThemeViewModel.swift */; };
+		14024B2B2F803E250058C6C3 /* TripStatusBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14024B2A2F803E250058C6C3 /* TripStatusBannerView.swift */; };
 		142DC9D82F7D5268009155F3 /* NurseryConnectDriverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DC9D72F7D5268009155F3 /* NurseryConnectDriverApp.swift */; };
 		142DC9DA2F7D5268009155F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DC9D92F7D5268009155F3 /* ContentView.swift */; };
 		142DC9DC2F7D526A009155F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 142DC9DB2F7D526A009155F3 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		14024B242F8039AE0058C6C3 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		14024B262F8039BF0058C6C3 /* ThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeService.swift; sourceTree = "<group>"; };
 		14024B282F8039D40058C6C3 /* ThemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewModel.swift; sourceTree = "<group>"; };
+		14024B2A2F803E250058C6C3 /* TripStatusBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStatusBannerView.swift; sourceTree = "<group>"; };
 		142DC9D42F7D5268009155F3 /* NurseryConnectDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseryConnectDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		142DC9D72F7D5268009155F3 /* NurseryConnectDriverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseryConnectDriverApp.swift; sourceTree = "<group>"; };
 		142DC9D92F7D5268009155F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				1491FE1B2F7D5AF500128EA4 /* EmptyStateView.swift */,
 				1491FE1D2F7D5AFD00128EA4 /* SectionHeaderView.swift */,
 				1491FE1F2F7D5B0500128EA4 /* InfoCardView.swift */,
+				14024B2A2F803E250058C6C3 /* TripStatusBannerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				142DCA262F7D57C6009155F3 /* LocationService.swift in Sources */,
 				142DCA2D2F7D57F8009155F3 /* Extensions.swift in Sources */,
 				1491FE162F7D5ADB00128EA4 /* RouteInfoCardView.swift in Sources */,
+				14024B2B2F803E250058C6C3 /* TripStatusBannerView.swift in Sources */,
 				1491FE062F7D5A0800128EA4 /* DashboardView.swift in Sources */,
 				142DCA182F7D53F2009155F3 /* TransportStatus.swift in Sources */,
 				142DCA282F7D57D3009155F3 /* Constants.swift in Sources */,

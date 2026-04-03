@@ -7,7 +7,7 @@ struct ChildRowView: View {
         HStack(spacing: 12) {
             Circle()
                 .fill(Color.blue.opacity(0.15))
-                .frame(width: 50, height: 50)
+                .frame(width: 52, height: 52)
                 .overlay {
                     Text(child.initials)
                         .font(.subheadline.bold())
@@ -31,7 +31,7 @@ struct ChildRowView: View {
 
             StatusBadgeView(status: child.status)
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, 6)
     }
 }
 

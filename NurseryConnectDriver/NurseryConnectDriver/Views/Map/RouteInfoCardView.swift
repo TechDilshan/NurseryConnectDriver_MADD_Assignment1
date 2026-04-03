@@ -17,6 +17,7 @@ struct RouteInfoCardView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(title)
                     .font(.headline)
+
                 Text(subtitle)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)

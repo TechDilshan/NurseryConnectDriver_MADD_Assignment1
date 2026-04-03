@@ -18,6 +18,6 @@ struct SectionHeaderView: View {
 }
 
 #Preview {
-    SectionHeaderView(title: "Driver Summary", subtitle: "Today's transport overview")
+    SectionHeaderView(title: "Driver Dashboard", subtitle: "Manage child transport and route progress")
         .padding()
 }

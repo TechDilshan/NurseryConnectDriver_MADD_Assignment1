@@ -72,16 +72,19 @@ final class LocationViewModel: ObservableObject {
         }
 
         let stop = routeStops[currentStopIndex]
-        currentLocation = DriverLocation(
-            latitude: stop.latitude,
-            longitude: stop.longitude,
-            timestamp: Date()
-        )
 
-        currentRegion = MKCoordinateRegion(
-            center: currentLocation.coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
-        )
+        withAnimation(.easeInOut(duration: 0.5)) {
+            currentLocation = DriverLocation(
+                latitude: stop.latitude,
+                longitude: stop.longitude,
+                timestamp: Date()
+            )
+
+            currentRegion = MKCoordinateRegion(
+                center: currentLocation.coordinate,
+                span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
+            )
+        }
 
         tripStatusText = "Current stop: \(stop.title)"
 
