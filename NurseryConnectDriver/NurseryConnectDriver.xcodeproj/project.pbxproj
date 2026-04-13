@@ -32,6 +32,8 @@
 		142DCA282F7D57D3009155F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DCA272F7D57D3009155F3 /* Constants.swift */; };
 		142DCA2A2F7D57DC009155F3 /* DateFormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DCA292F7D57DC009155F3 /* DateFormatterHelper.swift */; };
 		142DCA2D2F7D57F8009155F3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142DCA2C2F7D57F8009155F3 /* Extensions.swift */; };
+		148037C82F81033B004FCCDC /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148037C72F81033B004FCCDC /* Passenger.swift */; };
+		148037CA2F810598004FCCDC /* PassengerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148037C92F810598004FCCDC /* PassengerListView.swift */; };
 		1491FE022F7D59B300128EA4 /* SampleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 1491FE012F7D59B300128EA4 /* SampleData.json */; };
 		1491FE042F7D59FF00128EA4 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491FE032F7D59FF00128EA4 /* MainTabView.swift */; };
 		1491FE062F7D5A0800128EA4 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491FE052F7D5A0800128EA4 /* DashboardView.swift */; };
@@ -48,6 +50,7 @@
 		1491FE1E2F7D5AFD00128EA4 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491FE1D2F7D5AFD00128EA4 /* SectionHeaderView.swift */; };
 		1491FE202F7D5B0500128EA4 /* InfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491FE1F2F7D5B0500128EA4 /* InfoCardView.swift */; };
 		1491FE222F7D5B0F00128EA4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1491FE212F7D5B0F00128EA4 /* SettingsView.swift */; };
+		14A353AA2F80F7000006B067 /* MapStyleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A353A92F80F7000006B067 /* MapStyleOption.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,8 @@
 		142DCA272F7D57D3009155F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		142DCA292F7D57DC009155F3 /* DateFormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelper.swift; sourceTree = "<group>"; };
 		142DCA2C2F7D57F8009155F3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		148037C72F81033B004FCCDC /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
+		148037C92F810598004FCCDC /* PassengerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerListView.swift; sourceTree = "<group>"; };
 		1491FE012F7D59B300128EA4 /* SampleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleData.json; sourceTree = "<group>"; };
 		1491FE032F7D59FF00128EA4 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		1491FE052F7D5A0800128EA4 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 		1491FE1D2F7D5AFD00128EA4 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		1491FE1F2F7D5B0500128EA4 /* InfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardView.swift; sourceTree = "<group>"; };
 		1491FE212F7D5B0F00128EA4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		14A353A92F80F7000006B067 /* MapStyleOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyleOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +216,8 @@
 				142DCA172F7D53F2009155F3 /* TransportStatus.swift */,
 				142DCA192F7D53FE009155F3 /* RouteStop.swift */,
 				14024B242F8039AE0058C6C3 /* AppTheme.swift */,
+				14A353A92F80F7000006B067 /* MapStyleOption.swift */,
+				148037C72F81033B004FCCDC /* Passenger.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,6 +300,7 @@
 				1491FE112F7D5ACA00128EA4 /* LiveMapView.swift */,
 				1491FE132F7D5AD200128EA4 /* DriverMapView.swift */,
 				1491FE152F7D5ADB00128EA4 /* RouteInfoCardView.swift */,
+				148037C92F810598004FCCDC /* PassengerListView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -453,6 +462,7 @@
 				14024B292F8039D40058C6C3 /* ThemeViewModel.swift in Sources */,
 				142DC9D82F7D5268009155F3 /* NurseryConnectDriverApp.swift in Sources */,
 				1491FE082F7D5A1300128EA4 /* TransportListView.swift in Sources */,
+				148037CA2F810598004FCCDC /* PassengerListView.swift in Sources */,
 				142DCA162F7D53E7009155F3 /* DriverLocation.swift in Sources */,
 				142DCA1C2F7D5409009155F3 /* TransportViewModel.swift in Sources */,
 				1491FE1C2F7D5AF500128EA4 /* EmptyStateView.swift in Sources */,
@@ -468,6 +478,7 @@
 				1491FE1E2F7D5AFD00128EA4 /* SectionHeaderView.swift in Sources */,
 				1491FE102F7D5AC000128EA4 /* StatusBadgeView.swift in Sources */,
 				1491FE122F7D5ACA00128EA4 /* LiveMapView.swift in Sources */,
+				148037C82F81033B004FCCDC /* Passenger.swift in Sources */,
 				142DCA1E2F7D5412009155F3 /* LocationViewModel.swift in Sources */,
 				1491FE0E2F7D5AB800128EA4 /* TripSummaryView.swift in Sources */,
 				1491FE1A2F7D5AEE00128EA4 /* PrimaryButton.swift in Sources */,
@@ -483,6 +494,7 @@
 				14024B252F8039AF0058C6C3 /* AppTheme.swift in Sources */,
 				1491FE222F7D5B0F00128EA4 /* SettingsView.swift in Sources */,
 				142DCA202F7D5795009155F3 /* DataService.swift in Sources */,
+				14A353AA2F80F7000006B067 /* MapStyleOption.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +666,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -683,6 +696,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

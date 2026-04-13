@@ -3,6 +3,7 @@ import Foundation
 protocol LocationServiceProtocol {
     func initialLocation() -> DriverLocation
     func defaultStops() -> [RouteStop]
+    func samplePassengers() -> [Passenger]
 }
 
 final class LocationService: LocationServiceProtocol {
@@ -10,7 +11,7 @@ final class LocationService: LocationServiceProtocol {
         DriverLocation(
             latitude: 6.9271,
             longitude: 79.8612,
-            timestamp: Date()
+            passengers: samplePassengers()
         )
     }
 
@@ -51,6 +52,14 @@ final class LocationService: LocationServiceProtocol {
                 longitude: 79.8612,
                 order: 5
             )
+        ]
+    }
+
+    func samplePassengers() -> [Passenger] {
+        [
+            Passenger(name: "Emma Johnson", age: 4),
+            Passenger(name: "Liam Smith", age: 5),
+            Passenger(name: "Olivia Brown", age: 3)
         ]
     }
 }

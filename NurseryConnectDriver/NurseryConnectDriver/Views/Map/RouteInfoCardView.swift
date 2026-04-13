@@ -4,6 +4,7 @@ struct RouteInfoCardView: View {
     let title: String
     let subtitle: String
     let systemImage: String
+    var extraInfo: String? = nil
 
     var body: some View {
         HStack(spacing: 14) {
@@ -21,6 +22,12 @@ struct RouteInfoCardView: View {
                 Text(subtitle)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
+
+                if let extraInfo {
+                    Text(extraInfo)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
             }
 
             Spacer()
@@ -35,7 +42,8 @@ struct RouteInfoCardView: View {
 #Preview {
     RouteInfoCardView(
         title: "Current stop: Little Stars Preschool",
-        subtitle: "2 stop(s) remaining",
-        systemImage: "location.fill"
+        subtitle: "ETA: 2 min",
+        systemImage: "location.fill",
+        extraInfo: "Total route: 4.20 km"
     )
 }
