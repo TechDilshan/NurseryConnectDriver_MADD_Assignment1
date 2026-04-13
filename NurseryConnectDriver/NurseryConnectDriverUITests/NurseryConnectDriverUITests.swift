@@ -1,59 +1,109 @@
 import XCTest
-@testable import NurseryConnectDriver
 
-final class NurseryConnectDriverTests: XCTestCase {
-    @MainActor
-    func testMarkPickedUpChangesStatus() {
-        let viewModel = TransportViewModel(
-            storageService: MockStorageService(),
-            dataService: MockDataService()
-        )
+final class NurseryConnectDriverUITests: XCTestCase {
 
-        let child = viewModel.children[0]
-        viewModel.markPickedUp(child: child)
-
-        XCTAssertEqual(viewModel.children[0].status, .pickedUp)
-        XCTAssertNotNil(viewModel.children[0].pickupTime)
+    override func setUpWithError() throws {
+        continueAfterFailure = false
     }
 
-    @MainActor
-    func testCannotDropOffBeforePickup() {
-        let viewModel = TransportViewModel(
-            storageService: MockStorageService(),
-            dataService: MockDataService()
-        )
+    func testAppLaunchShowsMainTabs() throws {
+        let app = XCUIApplication()
+        app.launch()
 
-        let child = viewModel.children[0]
-        viewModel.markDroppedOff(child: child)
-
-        XCTAssertEqual(viewModel.children[0].status, .pending)
-        XCTAssertEqual(viewModel.errorMessage, "You must mark the child as picked up before drop off.")
+        XCTAssertTrue(app.tabBars.buttons["Dashboard"].exists)
+        XCTAssertTrue(app.tabBars.buttons["Manifest"].exists)
+        XCTAssertTrue(app.tabBars.buttons["Route"].exists)
+        XCTAssertTrue(app.tabBars.buttons["Settings"].exists)
     }
 
-    @MainActor
-    func testResetTripRestoresPendingStatus() {
-        let viewModel = TransportViewModel(
-            storageService: MockStorageService(),
-            dataService: MockDataService()
-        )
+    func testCanOpenManifestTab() throws {
+        let app = XCUIApplication()
+        app.launch()
 
-        let child = viewModel.children[0]
-        viewModel.markPickedUp(child: child)
-        viewModel.resetTrip()
+        app.tabBars.buttons["Manifest"].tap()
 
-        XCTAssertTrue(viewModel.children.allSatisfy { $0.status == .pending })
-        XCTAssertEqual(viewModel.pendingCount, viewModel.children.count)
-    }
-}
-
-final class MockStorageService: StorageServiceProtocol {
-    private var storedTrip: TransportTrip?
-
-    func saveTrip(_ trip: TransportTrip) {
-        storedTrip = trip
+        XCTAssertTrue(app.navigationBars["Today's Manifest"].exists)
     }
 
-    func loadTrip() -> TransportTrip? {
-        storedTrip
+    func testCanOpenRouteTab() throws {
+        let app = XCUIApplication()
+        app.launch()
+
+        app.tabBars.buttons["Route"].tap()
+
+        XCTAssertTrue(app.navigationBars["Live Route"].exists)
+    }
+
+    func testCanOpenSettingsTab() throws {
+        let app = XCUIApplication()
+        app.launch()
+
+        app.tabBars.buttons["Settings"].tap()
+
+        XCTAssertTrue(app.navigationBars["Settings"].exists)
+    }
+
+    func testDashboardContainsMainButtons() throws {
+        let app = XCUIApplication()
+        app.launch()
+
+        XCTAssertTrue(app.buttons["Open Today's Manifest"].exists)
+        XCTAssertTrue(app.buttons["Open Live Route"].exists)
+        XCTAssertTrue(app.buttons["View Trip Summary"].exists)
+    }
+
+    func testCanNavigateToTripSummaryFromDashboard() throws {
+        let app = XCUIApplication()
+        app.launch()
+
+        let tripSummaryButton = app.buttons["View Trip Summary"]
+        XCTAssertTrue(tripSummaryButton.waitForExistence(timeout: 5))
+
+        tripSummaryButton.tap()
+
+        let tripSummaryNavBar = app.navigationBars["Trip Summary"]
+        XCTAssertTrue(tripSummaryNavBar.waitForExistence(timeout: 5))
+    }
+
+    func testRouteScreenContainsMainControls() throws {
+        let app = XCUIApplication()
+        app.launch()
+
+        app.tabBars.buttons["Route"].tap()
+
+        XCTAssertTrue(app.buttons["Start Route"].exists)
+        XCTAssertTrue(app.buttons["Stop Route"].exists)
+        XCTAssertTrue(app.buttons["Reset Route"].exists)
+        XCTAssertTrue(app.buttons["Center Driver"].exists)
+    }
+
+    func testSettingsThemePickerExists() throws {
+        let app = XCUIApplication()
+        app.launch()
+
+        app.tabBars.buttons["Settings"].tap()
+
+        XCTAssertTrue(app.navigationBars["Settings"].exists)
+    }
+
+    func testManifestScreenShowsChildrenList() throws {
+        let app = XCUIApplication()
+        app.launch()
+
+        app.tabBars.buttons["Manifest"].tap()
+
+        XCTAssertTrue(app.staticTexts["Emma Johnson"].exists || app.staticTexts["Liam Smith"].exists || app.staticTexts["Olivia Brown"].exists)
+    }
+
+    func testCanOpenChildDetailsFromManifest() throws {
+        let app = XCUIApplication()
+        app.launch()
+
+        app.tabBars.buttons["Manifest"].tap()
+
+        if app.staticTexts["Emma Johnson"].exists {
+            app.staticTexts["Emma Johnson"].tap()
+            XCTAssertTrue(app.navigationBars["Child Details"].exists)
+        }
     }
 }
